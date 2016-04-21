@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+<style>
+
+body {
+  font: 10px sans-serif;
+  background: #fff;
+}
+
+/*
+button {
+    background: #ccc;
+    cursor: pointer;
+    border-top: solid 2px #eaeaea;
+    border-left: solid 2px #eaeaea;
+    border-bottom: solid 2px #777;
+    border-right: solid 2px #777;
+    padding: 5px 5px;
+}
+
+button.down {
+    background: #666;
+    border-top: solid 2px #777;
+    border-left: solid 2px #777;
+    border-bottom:solid 2px  #eaeaea;
+    border-right: solid 2px #eaeaea;
+}
+*/
+div.button {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+div.button:hover {
+    background: #fff;
+}
+div.button.down {
+    background: #ddd;
+}
+div.button.down:hover {
+    background: #ddd;
+}
+
+div#buttons {
+    width:800px;
+}
+
+.chord {
+  fill-opacity: .67;
+  stroke: #fff;
+  stroke-width: .5px;
+}
+
+</style>
+<body>
+    <h1>
+        Cycling Traffic Among Cities
+    </h1>
+    <svg class="graphic"></svg>
+    <br />
+    <div id="toggle" class="btn-group" role="group">
+        <button class="button btn btn-default" onclick="allOff()">Clear All</button>
+        <button class="button btn btn-default" onclick="allOn()">Select All</button>
+    </div>
+    <div id= "buttons" class="btn-toolbar" role="toolbar" aria-label="Hey there">
+    </div>
+    <p>
+        Mouseover the diagram to explore how many cyclists travel between each source and destination!
+    </p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="//d3js.org/d3.v3.min.js"></script>
+    <script src="//d3js.org/queue.v1.min.js"></script>
+    <script src="chord.js"> </script>
+</body>
